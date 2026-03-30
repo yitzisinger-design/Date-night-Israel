@@ -73,7 +73,18 @@
       gap: 0.5rem;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .filter-label {
+      width: 100%;
+      text-align: center;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #555;
+      margin-top: 0.6rem;
+      margin-bottom: 0.2rem;
     }
 
     .filter-btn {
@@ -92,6 +103,43 @@
       background: #c8783c;
       border-color: #c8783c;
       color: #fff;
+    }
+
+    .filter-btn[data-group="price"].active {
+      background: #7aab6a;
+      border-color: #7aab6a;
+    }
+
+    .filter-btn[data-group="price"]:hover {
+      background: #7aab6a;
+      border-color: #7aab6a;
+      color: #fff;
+    }
+
+    .filter-btn[data-group="kashrut"].active {
+      background: #a08040;
+      border-color: #a08040;
+    }
+
+    .filter-btn[data-group="kashrut"]:hover {
+      background: #a08040;
+      border-color: #a08040;
+      color: #fff;
+    }
+
+    .filter-btn[data-group="city"].active {
+      background: #6a7aab;
+      border-color: #6a7aab;
+    }
+
+    .filter-btn[data-group="city"]:hover {
+      background: #6a7aab;
+      border-color: #6a7aab;
+      color: #fff;
+    }
+
+    .city-section.hidden {
+      display: none;
     }
 
     .scroll-hint {
@@ -182,6 +230,7 @@
     .tag-grill { background: #8b5e2a; color: #fff; }
     .tag-fine { background: #c8783c; color: #fff; }
     .tag-middle-eastern { background: #5a7a3a; color: #fff; }
+    .tag-bar { background: #7a3a5a; color: #fff; }
 
     .kosher-tag {
       position: absolute;
@@ -254,6 +303,144 @@
       font-weight: 500;
     }
 
+    /* Page Tabs */
+    .page-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0a0a0a;
+      border-bottom: 1px solid #1e1c1e;
+    }
+
+    .page-tab {
+      padding: 1rem 2.5rem;
+      background: transparent;
+      border: none;
+      color: #706860;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .page-tab:hover {
+      color: #f5e6d3;
+    }
+
+    .page-tab.active {
+      color: #c8783c;
+      border-bottom-color: #c8783c;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Activity Cards */
+    .activity-card {
+      background: #141214;
+      border: 1px solid #1e1c1e;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-4px);
+      border-color: #c8783c44;
+    }
+
+    .activity-img {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .activity-img .activity-type {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .type-outdoor { background: #2a7a6a; color: #fff; }
+    .type-culture { background: #6a3a7b; color: #fff; }
+    .type-wellness { background: #3a6a8b; color: #fff; }
+    .type-adventure { background: #8b5e2a; color: #fff; }
+    .type-romantic { background: #8b3a5a; color: #fff; }
+    .type-nightlife { background: #7a3a5a; color: #fff; }
+
+    .activity-body {
+      padding: 1.5rem;
+    }
+
+    .activity-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+      color: #f5e6d3;
+    }
+
+    .activity-body .activity-category {
+      font-size: 0.8rem;
+      color: #c8783c;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+
+    .activity-body .desc {
+      font-size: 0.9rem;
+      color: #908880;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .activity-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: #706860;
+      align-items: center;
+    }
+
+    .activity-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .activity-time {
+      background: #1e1a18;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      color: #c8783c;
+      font-weight: 500;
+    }
+
+    .activity-cost {
+      background: #181e18;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      color: #7aab6a;
+      font-weight: 500;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -283,17 +470,49 @@
   <h1>Date Night Israel</h1>
   <p>The best kosher restaurants for an unforgettable evening, city by city.</p>
   <div class="kosher-badge">All Restaurants Are Kosher Certified</div>
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="fine-dining">Fine Dining</button>
-    <button class="filter-btn" data-filter="grill">Grill & Meat</button>
-    <button class="filter-btn" data-filter="italian">Italian</button>
-    <button class="filter-btn" data-filter="asian">Asian</button>
-    <button class="filter-btn" data-filter="middle-eastern">Middle Eastern</button>
-    <button class="filter-btn" data-filter="dairy">Dairy</button>
+  <div class="filter-bar" id="filter-cuisine">
+    <div class="filter-label">Cuisine</div>
+    <button class="filter-btn active" data-group="cuisine" data-filter="all">All</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="fine-dining">Fine Dining</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="grill">Grill & Meat</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="italian">Italian</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="asian">Asian</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="middle-eastern">Middle Eastern</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="dairy">Dairy</button>
+    <button class="filter-btn" data-group="cuisine" data-filter="bar">Bar</button>
+  </div>
+  <div class="filter-bar" id="filter-price">
+    <div class="filter-label">Price</div>
+    <button class="filter-btn active" data-group="price" data-filter="all">All Prices</button>
+    <button class="filter-btn" data-group="price" data-filter="budget">Budget (Under 120&#8362;)</button>
+    <button class="filter-btn" data-group="price" data-filter="mid">Mid-Range (120-200&#8362;)</button>
+    <button class="filter-btn" data-group="price" data-filter="upscale">Upscale (200+&#8362;)</button>
+  </div>
+  <div class="filter-bar" id="filter-kashrut">
+    <div class="filter-label">Kashrut</div>
+    <button class="filter-btn active" data-group="kashrut" data-filter="all">All</button>
+    <button class="filter-btn" data-group="kashrut" data-filter="mehadrin">Mehadrin</button>
+    <button class="filter-btn" data-group="kashrut" data-filter="rabbanut">Rabbanut</button>
+  </div>
+  <div class="filter-bar" id="filter-city">
+    <div class="filter-label">City</div>
+    <button class="filter-btn active" data-group="city" data-filter="all">All Cities</button>
+    <button class="filter-btn" data-group="city" data-filter="tel-aviv">Tel Aviv</button>
+    <button class="filter-btn" data-group="city" data-filter="jerusalem">Jerusalem</button>
+    <button class="filter-btn" data-group="city" data-filter="haifa">Haifa</button>
+    <button class="filter-btn" data-group="city" data-filter="galilee">Galilee</button>
+    <button class="filter-btn" data-group="city" data-filter="eilat">Eilat & Negev</button>
+    <button class="filter-btn" data-group="city" data-filter="rishon">Rishon LeZion</button>
   </div>
   <div class="scroll-hint">&#8595;</div>
 </section>
+
+<nav class="page-tabs">
+  <button class="page-tab active" data-tab="restaurants">Restaurants</button>
+  <button class="page-tab" data-tab="activities">Activities</button>
+</nav>
+
+<div id="tab-restaurants" class="tab-content active">
 
 <!-- TEL AVIV -->
 <section class="city-section" id="tel-aviv">
@@ -302,7 +521,7 @@
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -319,7 +538,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="grill">
+    <div class="card" data-type="grill" data-price="budget" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
         <span class="tag tag-grill">Grill</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -336,7 +555,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="italian">
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
         <span class="tag tag-italian">Italian</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -353,7 +572,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="asian">
+    <div class="card" data-type="asian" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80')">
         <span class="tag tag-asian">Asian</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -370,7 +589,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="grill">
+    <div class="card" data-type="grill" data-price="upscale" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80')">
         <span class="tag tag-grill">Grill</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -387,7 +606,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="dairy">
+    <div class="card" data-type="dairy" data-price="budget" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
         <span class="tag tag-dairy">Dairy</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -404,6 +623,91 @@
       </div>
     </div>
 
+    <div class="card" data-type="bar" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80')">
+        <span class="tag tag-bar">Bar</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Wine Garden</h3>
+        <div class="cuisine">Wine Bar / Culinary Bar</div>
+        <div class="desc">Kosher wine and culinary bar in the heart of Nahalat Binyamin. Warm European atmosphere with a true Tel Aviv soul &mdash; curated wines, cheeses, and tapas plates.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Wed-Thu, 8 PM onwards</span>
+          <span class="avg-price">Avg: 100-160 ILS/person</span>
+          <span>Nahalat Binyamin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="bar" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80')">
+        <span class="tag tag-bar">Bar</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Whisky Bar &mdash; Templars Cave</h3>
+        <div class="cuisine">Whisky Bar / Speakeasy</div>
+        <div class="desc">Hidden underground kosher speakeasy in an old Templars cave. Impressive collection of rare whiskies, craft cocktails, and a fusion menu in a sophisticated, mysterious setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Motzei Shabbat or Thu, 9 PM</span>
+          <span class="avg-price">Avg: 120-200 ILS/person</span>
+          <span>Sarona</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="bar" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80')">
+        <span class="tag tag-bar">Bar</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Jewel Bar</h3>
+        <div class="cuisine">Cocktail Bar</div>
+        <div class="desc">Kosher cocktail bar with Tel Aviv attitude and a New York accent. Creative mixology, vibrant atmosphere, and small plates in a slick, modern space.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Thu or Motzei Shabbat, 9 PM</span>
+          <span class="avg-price">Avg: 80-150 ILS/person</span>
+          <span>Central Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Goshen</h3>
+        <div class="cuisine">Steakhouse / Bistro</div>
+        <div class="desc">Elegant kosher meat bistro on Nahalat Binyamin. Beautifully cooked sirloin, lamb chops, and slow-braised short ribs in a warm, wood-and-earth-toned setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 200-300 ILS/person</span>
+          <span>Nahalat Binyamin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Taizu</h3>
+        <div class="cuisine">Asian Fusion / Fine Dining</div>
+        <div class="desc">High-end kosher Asian fusion inspired by Thailand, Vietnam, China, and Japan. Creative tasting menus and bold flavors in a sleek, upscale setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 220-350 ILS/person</span>
+          <span>Derech Menachem Begin</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -414,24 +718,24 @@
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
-        <span class="kosher-tag">Mehadrin</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Eucalyptus</h3>
-        <div class="cuisine">Biblical Cuisine / Fine Dining</div>
-        <div class="desc">Chef Moshe Basson's legendary restaurant near the Old City. Dishes inspired by biblical ingredients &mdash; hyssop, figs, pomegranates &mdash; in creative tasting menus.</div>
+        <h3>Rooftop at Mamilla</h3>
+        <div class="cuisine">Modern Israeli / Fine Dining</div>
+        <div class="desc">Chic rooftop restaurant above the Mamilla Hotel with breathtaking panoramic views of Jerusalem's Old City walls. Creative Israeli cuisine, craft cocktails, and an unforgettable ambiance.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
-          <span class="avg-price">Avg: 220-300 ILS/person</span>
-          <span>Artist Colony</span>
+          <span class="best-time">Best: Sun-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 250-350 ILS/person</span>
+          <span>Mamilla</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="middle-eastern">
+    <div class="card" data-type="middle-eastern" data-price="budget" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=600&q=80')">
         <span class="tag tag-middle-eastern">Middle Eastern</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -448,7 +752,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="grill">
+    <div class="card" data-type="grill" data-price="mid" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
         <span class="tag tag-grill">Grill</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -465,7 +769,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="italian">
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
         <span class="tag tag-italian">Italian</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -482,7 +786,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -499,7 +803,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="asian">
+    <div class="card" data-type="asian" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80')">
         <span class="tag tag-asian">Asian</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -516,6 +820,23 @@
       </div>
     </div>
 
+    <div class="card" data-type="bar" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80')">
+        <span class="tag tag-bar">Bar</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Black Iron</h3>
+        <div class="cuisine">Steakhouse Bar / Cocktails</div>
+        <div class="desc">Upscale kosher steakhouse bar near the shuk. Wagyu steaks, dry-aged cuts, and expertly crafted cocktails in a moody, industrial-chic atmosphere on Agrippas Street.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Mon-Thu, 8:30 PM</span>
+          <span class="avg-price">Avg: 200-300 ILS/person</span>
+          <span>Agrippas Street</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -526,7 +847,7 @@
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -543,7 +864,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="grill">
+    <div class="card" data-type="grill" data-price="budget" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
         <span class="tag tag-grill">Grill</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -560,7 +881,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="dairy">
+    <div class="card" data-type="dairy" data-price="budget" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
         <span class="tag tag-dairy">Dairy</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -587,7 +908,7 @@
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -604,7 +925,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="middle-eastern">
+    <div class="card" data-type="middle-eastern" data-price="mid" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=600&q=80')">
         <span class="tag tag-middle-eastern">Middle Eastern</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -621,7 +942,7 @@
       </div>
     </div>
 
-    <div class="card" data-type="italian">
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80')">
         <span class="tag tag-italian">Italian</span>
         <span class="kosher-tag">Rabbanut</span>
@@ -648,7 +969,7 @@
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="grill">
+    <div class="card" data-type="grill" data-price="mid" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80')">
         <span class="tag tag-grill">Grill</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -665,24 +986,41 @@
       </div>
     </div>
 
-    <div class="card" data-type="fine-dining">
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
         <span class="tag tag-fine">Fine Dining</span>
         <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Last Refuge</h3>
-        <div class="cuisine">Fish / Seafood-Style</div>
-        <div class="desc">Kosher fish restaurant perched above the Red Sea. Fresh catches, creative sauces, and an unforgettable view of the Jordanian mountains.</div>
+        <h3>Tulum Beach</h3>
+        <div class="cuisine">Beach Restaurant / Grill</div>
+        <div class="desc">One of the only kosher beach restaurants in Israel. Steaks, grilled fish, sushi, and a full cocktail menu right on the Red Sea sand with sunset views.</div>
         <div class="card-meta">
           <span class="best-time">Best: Sunset, any evening</span>
-          <span class="avg-price">Avg: 160-230 ILS/person</span>
-          <span>Coral Beach</span>
+          <span class="avg-price">Avg: 180-260 ILS/person</span>
+          <span>North Beach</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="middle-eastern">
+    <div class="card" data-type="grill" data-price="mid" data-kashrut="mehadrin">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
+      </div>
+      <div class="card-body">
+        <h3>Achla Platinum Grill</h3>
+        <div class="cuisine">Mediterranean Grill / BBQ</div>
+        <div class="desc">Popular kosher grill with lamb chops, generous salads, flatbreads, and Mediterranean specialties. Lively atmosphere and big portions.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7-9 PM</span>
+          <span class="avg-price">Avg: 100-160 ILS/person</span>
+          <span>Eilat Center</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="middle-eastern" data-price="mid" data-kashrut="mehadrin">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&q=80')">
         <span class="tag tag-middle-eastern">Middle Eastern</span>
         <span class="kosher-tag">Mehadrin</span>
@@ -702,25 +1040,309 @@
   </div>
 </section>
 
+<!-- RISHON LEZION -->
+<section class="city-section" id="rishon">
+  <h2 class="city-title">Rishon LeZion</h2>
+  <p class="city-subtitle">A booming culinary scene just south of Tel Aviv &mdash; upscale dining without the big-city hustle.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="mehadrin">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Mehadrin</span>
+      </div>
+      <div class="card-body">
+        <h3>Picuel</h3>
+        <div class="cuisine">Fine Dining / Modern Israeli</div>
+        <div class="desc">Newly opened high-end kosher restaurant offering a refined tasting menu experience. Mehadrin certified with elegant plating and seasonal ingredients. Reservations required.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 250-350 ILS/person</span>
+          <span>Rishon LeZion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="grill" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Lechem Besher</h3>
+        <div class="cuisine">Meat / Artisan Grill</div>
+        <div class="desc">Quality kosher meat restaurant with a focused, limited menu. Fresh breads baked on-site alongside smoking meats &mdash; a unique culinary experience built around fire and flour.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Rishon LeZion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="grill" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Emily Grill Bar</h3>
+        <div class="cuisine">Israeli Grill / Chef's Menu</div>
+        <div class="desc">Authentic Israeli grill with a rich chef's menu &mdash; fresh salads, unique starters, juicy meats, and desserts. Known for excellent flavors and fast, friendly service.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7-9 PM</span>
+          <span class="avg-price">Avg: 120-180 ILS/person</span>
+          <span>Rishon LeZion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Omino</h3>
+        <div class="cuisine">Asian / Sushi</div>
+        <div class="desc">Kosher Asian restaurant on the promenade overlooking the sea. High-quality sushi, salads, stir-fries, and fresh fish dishes made from scratch daily.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Tue-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 130-190 ILS/person</span>
+          <span>Rishon LeZion Promenade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Sorrento</h3>
+        <div class="cuisine">Italian / Fish / Dairy</div>
+        <div class="desc">Award-winning kosher dairy Italian restaurant. Fresh fish, handmade pastas, and classic Italian dishes. Voted best restaurant in the city.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Wed-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Rishon LeZion</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- end tab-restaurants -->
+
+<div id="tab-activities" class="tab-content">
+
+<!-- TEL AVIV ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Tel Aviv Activities</h2>
+  <p class="city-subtitle">The best couple activities in the White City &mdash; from sunset strolls to rooftop cocktails.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Sunset Walk on the Tayelet</h3>
+        <div class="activity-category">Beach / Promenade</div>
+        <div class="desc">Stroll along the Tel Aviv promenade from the Old Port to Jaffa as the sun sets over the Mediterranean. Stop for fresh pomegranate juice along the way.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 1 hour before sunset</span>
+          <span class="activity-cost">Free</span>
+          <span>Tel Aviv Promenade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Old Jaffa by Night</h3>
+        <div class="activity-category">History / Exploration</div>
+        <div class="desc">Wander the ancient alleyways of Old Jaffa after dark. Explore the galleries, the wishing bridge, and the stunning views of the lit-up Tel Aviv skyline.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 8-10 PM</span>
+          <span class="activity-cost">Free</span>
+          <span>Old Jaffa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&q=80')">
+        <span class="activity-type type-outdoor">Outdoor</span>
+      </div>
+      <div class="activity-body">
+        <h3>Kayaking on the Yarkon</h3>
+        <div class="activity-category">Water Sports / Adventure</div>
+        <div class="desc">Rent a tandem kayak or pedal boat on the Yarkon River. A fun, relaxed activity surrounded by greenery right in the heart of the city.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Late afternoon, Sun-Fri</span>
+          <span class="activity-cost">60-90 ILS/couple</span>
+          <span>Yarkon Park</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=600&q=80')">
+        <span class="activity-type type-nightlife">Nightlife</span>
+      </div>
+      <div class="activity-body">
+        <h3>Rooftop Drinks at Rothschild</h3>
+        <div class="activity-category">Cocktails / Nightlife</div>
+        <div class="desc">Hit one of the rooftop bars along Rothschild Boulevard. Sip craft cocktails with panoramic views of the Bauhaus skyline and warm night breeze.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 9 PM onwards</span>
+          <span class="activity-cost">80-150 ILS/couple</span>
+          <span>Rothschild Blvd</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80')">
+        <span class="activity-type type-wellness">Wellness</span>
+      </div>
+      <div class="activity-body">
+        <h3>Couples Spa at the Herods</h3>
+        <div class="activity-category">Spa / Relaxation</div>
+        <div class="desc">Unwind together with a couples massage, hot tub, and sauna session. Multiple luxury spas in central Tel Aviv offer evening packages.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Evening, book ahead</span>
+          <span class="activity-cost">400-700 ILS/couple</span>
+          <span>Central Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Street Art Tour in Florentin</h3>
+        <div class="activity-category">Art / Walking Tour</div>
+        <div class="desc">Explore Florentin's vibrant street art scene together. Every wall is a canvas &mdash; murals, graffiti, and hidden gems around every corner.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Late afternoon</span>
+          <span class="activity-cost">Free (guided: 80 ILS/person)</span>
+          <span>Florentin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&q=80')">
+        <span class="activity-type type-adventure">Adventure</span>
+      </div>
+      <div class="activity-body">
+        <h3>Sunset Segway Tour</h3>
+        <div class="activity-category">Tour / Adventure</div>
+        <div class="desc">Glide along the beachfront on a Segway as the sun dips below the horizon. Guided tours cover the port, beaches, and Jaffa in about 90 minutes.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 1.5 hrs before sunset</span>
+          <span class="activity-cost">150-200 ILS/person</span>
+          <span>Tel Aviv Port</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Shuk HaCarmel Food Walk</h3>
+        <div class="activity-category">Food / Market</div>
+        <div class="desc">Sample your way through the Carmel Market together. Fresh halva, spices, stuffed dates, bourekas, and fresh-squeezed juices at every turn.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Sun-Thu, 10 AM - 2 PM</span>
+          <span class="activity-cost">50-100 ILS/person</span>
+          <span>Carmel Market</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- end tab-activities -->
+
 <footer>
   <p>Date Night Israel &copy; 2026 &mdash; Curated with love. Reservations recommended.</p>
   <p class="note">All listed restaurants are kosher certified. Verify current kashrut certification before visiting. Prices are approximate per person including food only.</p>
 </footer>
 
 <script>
-  // Filter functionality
+  // Active filters state
+  const activeFilters = {
+    cuisine: 'all',
+    price: 'all',
+    kashrut: 'all',
+    city: 'all'
+  };
+
+  // City section ID mapping
+  const cityMap = {
+    'tel-aviv': 'tel-aviv',
+    'jerusalem': 'jerusalem',
+    'haifa': 'haifa',
+    'galilee': 'galilee',
+    'eilat': 'eilat',
+    'rishon': 'rishon'
+  };
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('.card');
+    const sections = document.querySelectorAll('.city-section');
+
+    cards.forEach(card => {
+      const matchCuisine = activeFilters.cuisine === 'all' || card.dataset.type === activeFilters.cuisine;
+      const matchPrice = activeFilters.price === 'all' || card.dataset.price === activeFilters.price;
+      const matchKashrut = activeFilters.kashrut === 'all' || card.dataset.kashrut === activeFilters.kashrut;
+      card.style.display = (matchCuisine && matchPrice && matchKashrut) ? '' : 'none';
+    });
+
+    // Hide city sections that have no visible cards (or filtered by city)
+    sections.forEach(section => {
+      const sectionId = section.id;
+      const cityMatch = activeFilters.city === 'all' || activeFilters.city === sectionId;
+      const visibleCards = section.querySelectorAll('.card:not([style*="display: none"])');
+      section.classList.toggle('hidden', !cityMatch || visibleCards.length === 0);
+    });
+  }
+
+  // Bind filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      const group = btn.dataset.group;
+      // Toggle active within group
+      document.querySelectorAll(`.filter-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.card').forEach(card => {
-        if (filter === 'all' || card.dataset.type === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      activeFilters[group] = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.page-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
@@ -734,7 +1356,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.card').forEach(card => {
+  document.querySelectorAll('.card, .activity-card').forEach(card => {
     card.style.opacity = 0;
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.6s, transform 0.6s';
