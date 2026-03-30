@@ -2443,8 +2443,8 @@
   };
 
   function applyFilters() {
-    const cards = document.querySelectorAll('.card');
-    const sections = document.querySelectorAll('.city-section');
+    const cards = document.querySelectorAll('#tab-restaurants .card');
+    const sections = document.querySelectorAll('#tab-restaurants .city-section');
 
     cards.forEach(card => {
       const matchCuisine = activeFilters.cuisine === 'all' || card.dataset.type === activeFilters.cuisine;
