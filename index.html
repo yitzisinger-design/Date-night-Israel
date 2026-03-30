@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date Night Israel</title>
+  <title>Date Night Israel - Best Kosher Restaurants</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -52,7 +52,19 @@
       font-size: clamp(1rem, 2vw, 1.3rem);
       font-weight: 300;
       color: #a09890;
-      max-width: 500px;
+      max-width: 550px;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero .kosher-badge {
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid #c8783c;
+      border-radius: 999px;
+      color: #c8783c;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
       margin-bottom: 2.5rem;
     }
 
@@ -162,11 +174,28 @@
       letter-spacing: 0.06em;
     }
 
-    .tag-bar { background: #7b3fa0; color: #fff; }
-    .tag-restaurant { background: #c8783c; color: #fff; }
-    .tag-rooftop { background: #2a7a6a; color: #fff; }
-    .tag-wine { background: #8b2252; color: #fff; }
-    .tag-cocktail { background: #3a5a8c; color: #fff; }
+    .tag-meat { background: #8b3a3a; color: #fff; }
+    .tag-dairy { background: #3a6a8b; color: #fff; }
+    .tag-parve { background: #2a7a6a; color: #fff; }
+    .tag-italian { background: #7b5a3a; color: #fff; }
+    .tag-asian { background: #6a3a7b; color: #fff; }
+    .tag-grill { background: #8b5e2a; color: #fff; }
+    .tag-fine { background: #c8783c; color: #fff; }
+    .tag-middle-eastern { background: #5a7a3a; color: #fff; }
+
+    .kosher-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      background: rgba(0,0,0,0.7);
+      color: #c8783c;
+      border: 1px solid #c8783c55;
+      letter-spacing: 0.04em;
+    }
 
     .card-body {
       padding: 1.5rem;
@@ -200,6 +229,7 @@
       gap: 0.8rem;
       font-size: 0.8rem;
       color: #706860;
+      align-items: center;
     }
 
     .card-meta span {
@@ -216,6 +246,14 @@
       font-weight: 500;
     }
 
+    .avg-price {
+      background: #181e18;
+      padding: 0.3rem 0.7rem;
+      border-radius: 8px;
+      color: #7aab6a;
+      font-weight: 500;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -224,6 +262,12 @@
       font-size: 0.85rem;
       border-top: 1px solid #1a1a1a;
       margin-top: 4rem;
+    }
+
+    footer .note {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #333;
     }
 
     @media (max-width: 420px) {
@@ -237,14 +281,16 @@
 
 <section class="hero">
   <h1>Date Night Israel</h1>
-  <p>The best bars & restaurants for an unforgettable evening, city by city.</p>
+  <p>The best kosher restaurants for an unforgettable evening, city by city.</p>
+  <div class="kosher-badge">All Restaurants Are Kosher Certified</div>
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="restaurant">Restaurants</button>
-    <button class="filter-btn" data-filter="bar">Bars</button>
-    <button class="filter-btn" data-filter="rooftop">Rooftop</button>
-    <button class="filter-btn" data-filter="wine">Wine Bars</button>
-    <button class="filter-btn" data-filter="cocktail">Cocktails</button>
+    <button class="filter-btn" data-filter="fine-dining">Fine Dining</button>
+    <button class="filter-btn" data-filter="grill">Grill & Meat</button>
+    <button class="filter-btn" data-filter="italian">Italian</button>
+    <button class="filter-btn" data-filter="asian">Asian</button>
+    <button class="filter-btn" data-filter="middle-eastern">Middle Eastern</button>
+    <button class="filter-btn" data-filter="dairy">Dairy</button>
   </div>
   <div class="scroll-hint">&#8595;</div>
 </section>
@@ -252,102 +298,108 @@
 <!-- TEL AVIV -->
 <section class="city-section" id="tel-aviv">
   <h2 class="city-title">Tel Aviv</h2>
-  <p class="city-subtitle">The city that never sleeps &mdash; vibrant nightlife, world-class chefs, Mediterranean soul.</p>
+  <p class="city-subtitle">World-class kosher dining on the Mediterranean &mdash; from fine dining to sizzling grills.</p>
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="restaurant">
+    <div class="card" data-type="fine-dining">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Mashya</h3>
-        <div class="cuisine">Modern Israeli / Mediterranean</div>
-        <div class="desc">Elegant Levantine cuisine inside the historic Hotel Montefiore. Seasonal tasting menus highlight local produce with French technique.</div>
+        <h3>Lumina by Meir Adoni</h3>
+        <div class="cuisine">Modern Israeli / Fine Dining</div>
+        <div class="desc">Chef Meir Adoni's flagship kosher restaurant. Innovative tasting menus blending Moroccan, Israeli, and French influences in a refined setting.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Thu-Sat, 8-10 PM</span>
-          <span>$$$</span>
-          <span>Neve Tzedek</span>
+          <span class="best-time">Best: Motzei Shabbat or Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 280-350 ILS/person</span>
+          <span>Herzliya Pituach</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="bar">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80')">
-        <span class="tag tag-bar">Bar</span>
+    <div class="card" data-type="grill">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Imperial Craft</h3>
-        <div class="cuisine">Cocktail Bar</div>
-        <div class="desc">Award-winning cocktails in a glamorous art-deco space on HaYarkon. Bartenders tailor drinks to your mood. A Tel Aviv institution.</div>
+        <h3>Shipudei HaTikva</h3>
+        <div class="cuisine">Israeli Grill / Skewers</div>
+        <div class="desc">The original HaTikva Market grill. Legendary kebabs, grilled meats, and freshly baked laffa. Authentic, loud, and packed with flavor.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Thu-Fri, 9 PM-midnight</span>
-          <span>$$-$$$</span>
-          <span>HaYarkon St</span>
+          <span class="best-time">Best: Sun-Thu, 7-9 PM</span>
+          <span class="avg-price">Avg: 90-140 ILS/person</span>
+          <span>HaTikva Market</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="restaurant">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+    <div class="card" data-type="italian">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Claro</h3>
-        <div class="cuisine">Mediterranean / Wood-Fire</div>
-        <div class="desc">Chef Ran Shmueli's wood-fire grill in Jaffa Port. Whole fish, seasonal vegetables, and house-made pastas in a stunning stone setting.</div>
+        <h3>Benny HaDayag</h3>
+        <div class="cuisine">Seafood-Style / Mediterranean</div>
+        <div class="desc">Iconic kosher fish restaurant at the Old Jaffa Port. Fresh catches, pastas, and Mediterranean plates with stunning sea views.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Fri lunch or Sat, 8 PM</span>
-          <span>$$$</span>
+          <span class="best-time">Best: Sunset, Sun-Thu</span>
+          <span class="avg-price">Avg: 180-250 ILS/person</span>
           <span>Jaffa Port</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="wine">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80')">
-        <span class="tag tag-wine">Wine Bar</span>
+    <div class="card" data-type="asian">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Jaja</h3>
-        <div class="cuisine">Natural Wine Bar</div>
-        <div class="desc">Intimate natural wine bar on Rabbi Meir St. Israeli and European bottles, cheese boards, and a cozy candlelit atmosphere.</div>
+        <h3>Onami</h3>
+        <div class="cuisine">Japanese / Sushi</div>
+        <div class="desc">Premium kosher sushi and Japanese cuisine. Creative rolls, sashimi platters, and Asian fusion dishes in a sleek, modern space.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Tue-Wed, 7-10 PM</span>
-          <span>$$</span>
-          <span>Lev Ha'Ir</span>
+          <span class="best-time">Best: Tue-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 160-220 ILS/person</span>
+          <span>Ibn Gabirol</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="cocktail">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80')">
-        <span class="tag tag-cocktail">Cocktails</span>
+    <div class="card" data-type="grill">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Bellboy</h3>
-        <div class="cuisine">Speakeasy</div>
-        <div class="desc">Hidden behind an unmarked door, this speakeasy serves inventive cocktails with Middle Eastern botanicals. Ring the bell to enter.</div>
+        <h3>Vitrina</h3>
+        <div class="cuisine">Steakhouse / Grill</div>
+        <div class="desc">Upscale kosher steakhouse with dry-aged cuts, premium burgers, and an impressive wine list. Meat-lover's paradise with a date-night vibe.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Thu-Sat, 10 PM+</span>
-          <span>$$-$$$</span>
-          <span>Lilienblum St</span>
+          <span class="best-time">Best: Motzei Shabbat or Wed-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 200-300 ILS/person</span>
+          <span>Rothschild Blvd</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="rooftop">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80')">
-        <span class="tag tag-rooftop">Rooftop</span>
+    <div class="card" data-type="dairy">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
+        <span class="tag tag-dairy">Dairy</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Sachi</h3>
-        <div class="cuisine">Pan-Asian / Rooftop</div>
-        <div class="desc">Rooftop dining atop the Norman hotel with panoramic sea views. Pan-Asian flavors, creative sushi, and sunset cocktails.</div>
+        <h3>Cafe Nechama</h3>
+        <div class="cuisine">Dairy Cafe / Brunch</div>
+        <div class="desc">Charming dairy cafe with wood-fired pizzas, fresh pastas, shakshuka, and decadent desserts. A cozy, romantic neighborhood gem.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sunset, any evening</span>
-          <span>$$$-$$$$</span>
-          <span>Nachmani St</span>
+          <span class="best-time">Best: Thu evening or Fri brunch</span>
+          <span class="avg-price">Avg: 80-130 ILS/person</span>
+          <span>Florentin</span>
         </div>
       </div>
     </div>
@@ -358,70 +410,108 @@
 <!-- JERUSALEM -->
 <section class="city-section" id="jerusalem">
   <h2 class="city-title">Jerusalem</h2>
-  <p class="city-subtitle">Ancient stone meets modern flavor &mdash; a city of depth, soul, and surprising culinary creativity.</p>
+  <p class="city-subtitle">Ancient stone meets bold flavors &mdash; the holy city's kosher dining scene is thriving.</p>
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="restaurant">
+    <div class="card" data-type="fine-dining">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Machneyuda</h3>
-        <div class="cuisine">Market-to-Table</div>
-        <div class="desc">The legendary shuk restaurant. Loud, joyful, and bursting with flavor. Chefs cook in an open kitchen to pounding music. Iconic.</div>
+        <h3>Eucalyptus</h3>
+        <div class="cuisine">Biblical Cuisine / Fine Dining</div>
+        <div class="desc">Chef Moshe Basson's legendary restaurant near the Old City. Dishes inspired by biblical ingredients &mdash; hyssop, figs, pomegranates &mdash; in creative tasting menus.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Tue-Thu, 8:30 PM</span>
-          <span>$$$</span>
+          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 220-300 ILS/person</span>
+          <span>Artist Colony</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="middle-eastern">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=600&q=80')">
+        <span class="tag tag-middle-eastern">Middle Eastern</span>
+        <span class="kosher-tag">Mehadrin</span>
+      </div>
+      <div class="card-body">
+        <h3>Marvad HaKsamim</h3>
+        <div class="cuisine">Yemenite / Traditional</div>
+        <div class="desc">Beloved Yemenite restaurant in Mahane Yehuda. Huge portions of kubbeh soup, jachnun, malawach, and slow-cooked meats. Soul food at its best.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 6-8 PM</span>
+          <span class="avg-price">Avg: 70-110 ILS/person</span>
           <span>Mahane Yehuda</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="bar">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1525268323446-0505b6fe7778?w=600&q=80')">
-        <span class="tag tag-bar">Bar</span>
+    <div class="card" data-type="grill">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>BeerBazaar</h3>
-        <div class="cuisine">Craft Beer Bar</div>
-        <div class="desc">Over 100 Israeli craft beers on tap inside the Mahane Yehuda market. After the stalls close, the shuk transforms into bar alley.</div>
+        <h3>Steakiat HaShuk</h3>
+        <div class="cuisine">Steakhouse / Grill</div>
+        <div class="desc">Premium kosher steaks right inside the shuk. Dry-aged ribeye, lamb chops, and fresh sides in a buzzing market atmosphere.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Thu night, 9 PM+</span>
-          <span>$-$$</span>
+          <span class="best-time">Best: Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 150-220 ILS/person</span>
           <span>Mahane Yehuda</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="restaurant">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+    <div class="card" data-type="italian">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Satya</h3>
-        <div class="cuisine">Modern Israeli</div>
-        <div class="desc">From the Machneyuda team &mdash; a slightly more intimate setting with bold flavors and a creative cocktail menu to match.</div>
+        <h3>Angelica</h3>
+        <div class="cuisine">Italian / Dairy</div>
+        <div class="desc">Upscale kosher Italian in the First Station complex. Hand-rolled pastas, wood-fired pizzas, risottos, and a curated wine list.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Mon-Wed, 8 PM</span>
-          <span>$$$</span>
-          <span>Mahane Yehuda</span>
+          <span class="best-time">Best: Motzei Shabbat or Wed, 8 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>First Station</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="wine">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=600&q=80')">
-        <span class="tag tag-wine">Wine Bar</span>
+    <div class="card" data-type="fine-dining">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Rooftop at Mamilla</h3>
-        <div class="cuisine">Wine & Views</div>
-        <div class="desc">Sip Israeli wines overlooking the Old City walls. An unbeatable backdrop for a romantic evening with curated wine flights.</div>
+        <h3>Resto Bar</h3>
+        <div class="cuisine">Modern Israeli / Meat</div>
+        <div class="desc">Sophisticated meat restaurant with creative Israeli cuisine. Chef-driven seasonal menu, craft cocktails, and an intimate candlelit ambiance.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sunset, Sun-Thu</span>
-          <span>$$$</span>
-          <span>Mamilla</span>
+          <span class="best-time">Best: Mon-Thu, 8:30 PM</span>
+          <span class="avg-price">Avg: 180-260 ILS/person</span>
+          <span>German Colony</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Mifgash Ha'Steak (Asia)</h3>
+        <div class="cuisine">Asian Fusion / Meat</div>
+        <div class="desc">Popular kosher Asian-fusion spot. Wok dishes, noodles, crispy chicken, and sushi rolls in a lively, family-friendly setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7 PM</span>
+          <span class="avg-price">Avg: 100-160 ILS/person</span>
+          <span>Talpiot</span>
         </div>
       </div>
     </div>
@@ -432,53 +522,56 @@
 <!-- HAIFA -->
 <section class="city-section" id="haifa">
   <h2 class="city-title">Haifa</h2>
-  <p class="city-subtitle">A chill port city with a rising food scene &mdash; coexistence on a plate, views of the bay.</p>
+  <p class="city-subtitle">Bay views and rising kosher culinary creativity in Israel's northern gem.</p>
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="restaurant">
+    <div class="card" data-type="fine-dining">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Fattoush</h3>
-        <div class="cuisine">Arab-Israeli / Fine Dining</div>
-        <div class="desc">Elevated Arab cuisine in the German Colony. Chef Alaa Musa creates stunning dishes rooted in local tradition with modern presentation.</div>
+        <h3>Shtreimel</h3>
+        <div class="cuisine">Modern Israeli / Dairy</div>
+        <div class="desc">Elegant kosher dairy restaurant on the Carmel. Creative pastas, fresh fish dishes, and stunning desserts with panoramic bay views.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Fri-Sat, 8 PM</span>
-          <span>$$$</span>
-          <span>German Colony</span>
+          <span class="best-time">Best: Tue-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Carmel Center</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="bar">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&q=80')">
-        <span class="tag tag-bar">Bar</span>
+    <div class="card" data-type="grill">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Libira</h3>
-        <div class="cuisine">Craft Brewery & Bar</div>
-        <div class="desc">Haifa's beloved craft brewery in the port area. Fresh house brews, pub food, and a relaxed vibe with harbor views.</div>
+        <h3>Shawarma Emil</h3>
+        <div class="cuisine">Shawarma / Middle Eastern</div>
+        <div class="desc">Haifa's best kosher shawarma. Perfectly spiced, slow-roasted meat carved fresh, served with house-made hummus and pickles. A local legend.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Thu-Sat, 7 PM</span>
-          <span>$$</span>
-          <span>Downtown Port</span>
+          <span class="best-time">Best: Sun-Thu, 6-9 PM</span>
+          <span class="avg-price">Avg: 50-80 ILS/person</span>
+          <span>Hadar</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="rooftop">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80')">
-        <span class="tag tag-rooftop">Rooftop</span>
+    <div class="card" data-type="dairy">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
+        <span class="tag tag-dairy">Dairy</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Etz Cafe</h3>
-        <div class="cuisine">Cafe-Bar / Views</div>
-        <div class="desc">Perched on the Carmel ridge with sweeping bay views. Great cocktails, light bites, and one of the best sunset spots in the north.</div>
+        <h3>Cafe Louise</h3>
+        <div class="cuisine">Dairy Cafe / Brunch</div>
+        <div class="desc">Charming kosher dairy cafe with great pizzas, salads, and pastries. Outdoor seating on a tree-lined street, perfect for a relaxed date.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sunset, any evening</span>
-          <span>$$</span>
+          <span class="best-time">Best: Thu evening or Fri morning</span>
+          <span class="avg-price">Avg: 70-120 ILS/person</span>
           <span>Carmel Center</span>
         </div>
       </div>
@@ -487,57 +580,60 @@
   </div>
 </section>
 
-<!-- TIBERIAS & GALILEE -->
+<!-- THE GALILEE -->
 <section class="city-section" id="galilee">
   <h2 class="city-title">The Galilee</h2>
-  <p class="city-subtitle">Wine country, boutique farms, and lake-side dining &mdash; Israel's romantic north.</p>
+  <p class="city-subtitle">Rolling hills, wineries, and farm-to-table dining &mdash; Israel's romantic kosher north.</p>
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="wine">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80')">
-        <span class="tag tag-wine">Wine Bar</span>
-      </div>
-      <div class="card-body">
-        <h3>Tulip Winery</h3>
-        <div class="cuisine">Winery & Tasting Room</div>
-        <div class="desc">Award-winning boutique winery in Kfar Tikva. Book a private tasting with cheese pairings overlooking rolling Galilean hills.</div>
-        <div class="card-meta">
-          <span class="best-time">Best: Fri afternoon, 2-5 PM</span>
-          <span>$$</span>
-          <span>Kfar Tikva</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" data-type="restaurant">
+    <div class="card" data-type="fine-dining">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Magdalena</h3>
-        <div class="cuisine">Galilean Farm-to-Table</div>
-        <div class="desc">On the shores of the Sea of Galilee at the Scots Hotel. Locally sourced ingredients, fresh fish, and a serene lakeside setting.</div>
+        <h3>Decks</h3>
+        <div class="cuisine">Steakhouse / Lakeside</div>
+        <div class="desc">Kosher steakhouse right on the Kinneret. Premium cuts, fresh fish, and a magical setting with the lake lapping beneath the wooden deck.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sat evening, 7 PM</span>
-          <span>$$$</span>
+          <span class="best-time">Best: Motzei Shabbat, sunset</span>
+          <span class="avg-price">Avg: 180-260 ILS/person</span>
           <span>Tiberias</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="restaurant">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+    <div class="card" data-type="middle-eastern">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=600&q=80')">
+        <span class="tag tag-middle-eastern">Middle Eastern</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>HaBait Shel Ramzi</h3>
-        <div class="cuisine">Druze Home Cooking</div>
-        <div class="desc">Authentic Druze home restaurant in Daliat el-Carmel. Multi-course feasts of handmade dishes served family-style. Book ahead.</div>
+        <h3>Dag Al HaDan</h3>
+        <div class="cuisine">Fish / Nature Setting</div>
+        <div class="desc">Fresh trout and fish dishes beside the Dan River in a lush garden setting. A Galilee classic &mdash; dine surrounded by nature and flowing water.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Sat lunch, 12-2 PM</span>
-          <span>$$</span>
-          <span>Daliat el-Carmel</span>
+          <span class="best-time">Best: Fri lunch, 12-2 PM</span>
+          <span class="avg-price">Avg: 120-170 ILS/person</span>
+          <span>Dan River</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="italian">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Chez Galita</h3>
+        <div class="cuisine">Dairy / Boutique Winery</div>
+        <div class="desc">Boutique kosher dairy restaurant at a Galilean winery. Artisan cheeses, fresh pastas, and wine pairings with vineyard views.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Fri afternoon, 1-4 PM</span>
+          <span class="avg-price">Avg: 130-180 ILS/person</span>
+          <span>Upper Galilee</span>
         </div>
       </div>
     </div>
@@ -545,41 +641,60 @@
   </div>
 </section>
 
-<!-- EILAT -->
+<!-- EILAT & NEGEV -->
 <section class="city-section" id="eilat">
   <h2 class="city-title">Eilat & The Negev</h2>
-  <p class="city-subtitle">Desert heat, Red Sea breezes &mdash; tropical cocktails and fresh seafood at the southern tip.</p>
+  <p class="city-subtitle">Desert skies, Red Sea sunsets &mdash; kosher dining at Israel's southern tip.</p>
   <div class="city-divider"></div>
   <div class="card-grid">
 
-    <div class="card" data-type="restaurant">
+    <div class="card" data-type="grill">
       <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80')">
-        <span class="tag tag-restaurant">Restaurant</span>
+        <span class="tag tag-grill">Grill</span>
+        <span class="kosher-tag">Mehadrin</span>
       </div>
       <div class="card-body">
-        <h3>Pago Pago</h3>
-        <div class="cuisine">Seafood</div>
-        <div class="desc">Fresh Red Sea fish and seafood right on the marina. Grilled calamari, shrimp, and catch of the day with views of the water.</div>
+        <h3>Shipudei Eilat</h3>
+        <div class="cuisine">Israeli Grill / Meat</div>
+        <div class="desc">Classic kosher grill with generous portions. Kebabs, steaks, and grilled chicken with fresh salads and warm pita. A local favorite.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Any evening, 7-9 PM</span>
-          <span>$$-$$$</span>
-          <span>North Beach Marina</span>
+          <span class="best-time">Best: Sun-Thu, 7-9 PM</span>
+          <span class="avg-price">Avg: 100-150 ILS/person</span>
+          <span>Industrial Area</span>
         </div>
       </div>
     </div>
 
-    <div class="card" data-type="cocktail">
-      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&q=80')">
-        <span class="tag tag-cocktail">Cocktails</span>
+    <div class="card" data-type="fine-dining">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Three Monkeys</h3>
-        <div class="cuisine">Tropical Cocktail Bar</div>
-        <div class="desc">Tiki-style bar on the promenade. Frozen cocktails, rum punches, and a party atmosphere with the Red Sea mountains as backdrop.</div>
+        <h3>Last Refuge</h3>
+        <div class="cuisine">Fish / Seafood-Style</div>
+        <div class="desc">Kosher fish restaurant perched above the Red Sea. Fresh catches, creative sauces, and an unforgettable view of the Jordanian mountains.</div>
         <div class="card-meta">
-          <span class="best-time">Best: Fri-Sat, 9 PM+</span>
-          <span>$$</span>
-          <span>Promenade</span>
+          <span class="best-time">Best: Sunset, any evening</span>
+          <span class="avg-price">Avg: 160-230 ILS/person</span>
+          <span>Coral Beach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="middle-eastern">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&q=80')">
+        <span class="tag tag-middle-eastern">Middle Eastern</span>
+        <span class="kosher-tag">Mehadrin</span>
+      </div>
+      <div class="card-body">
+        <h3>Rak Basar</h3>
+        <div class="cuisine">Meat / Middle Eastern</div>
+        <div class="desc">All-you-can-eat kosher meat fest. Endless skewers, slow-cooked meats, hummus, and fresh salads. Come hungry, leave happy.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Mon-Thu, 7 PM</span>
+          <span class="avg-price">Avg: 120-160 ILS/person</span>
+          <span>North Beach</span>
         </div>
       </div>
     </div>
@@ -589,6 +704,7 @@
 
 <footer>
   <p>Date Night Israel &copy; 2026 &mdash; Curated with love. Reservations recommended.</p>
+  <p class="note">All listed restaurants are kosher certified. Verify current kashrut certification before visiting. Prices are approximate per person including food only.</p>
 </footer>
 
 <script>
