@@ -34,6 +34,7 @@
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: radial-gradient(circle at 50% 40%, rgba(200, 120, 60, 0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
 
     .hero h1 {
@@ -441,6 +442,34 @@
       font-weight: 500;
     }
 
+    /* Popular Cards */
+    .popular-rank {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      background: #c8783c;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .popular-why {
+      background: #1e1a18;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      color: #c8783c;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -509,6 +538,7 @@
 
 <nav class="page-tabs">
   <button class="page-tab active" data-tab="restaurants">Restaurants</button>
+  <button class="page-tab" data-tab="popular">Popular</button>
   <button class="page-tab" data-tab="activities">Activities</button>
 </nav>
 
@@ -646,12 +676,12 @@
         <span class="kosher-tag">Rabbanut</span>
       </div>
       <div class="card-body">
-        <h3>Whisky Bar &mdash; Templars Cave</h3>
-        <div class="cuisine">Whisky Bar / Speakeasy</div>
-        <div class="desc">Hidden underground kosher speakeasy in an old Templars cave. Impressive collection of rare whiskies, craft cocktails, and a fusion menu in a sophisticated, mysterious setting.</div>
+        <h3>Whiskey Bar &amp; Museum</h3>
+        <div class="cuisine">Whiskey Bar / Steakhouse</div>
+        <div class="desc">Over 1,000 whiskeys from 13 countries in a 19th-century Templar tunnel beneath Sarona. Kosher meat menu with premium steaks and smoked meats &mdash; one of the largest whiskey bars in the world.</div>
         <div class="card-meta">
           <span class="best-time">Best: Motzei Shabbat or Thu, 9 PM</span>
-          <span class="avg-price">Avg: 120-200 ILS/person</span>
+          <span class="avg-price">Avg: 150-250 ILS/person</span>
           <span>Sarona</span>
         </div>
       </div>
@@ -704,6 +734,74 @@
           <span class="best-time">Best: Tue-Thu, 8 PM</span>
           <span class="avg-price">Avg: 220-350 ILS/person</span>
           <span>Derech Menachem Begin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="dairy" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-dairy">Dairy</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Fifty and One</h3>
+        <div class="cuisine">Italian / Dairy</div>
+        <div class="desc">Upscale kosher Italian dairy restaurant on Nahalat Binyamin. Handmade pastas with creative twists &mdash; tortellini in spiced butter, Jerusalem artichoke cream, and seasonal specials. Intimate evening-only dining.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Wed, 7-10 PM</span>
+          <span class="avg-price">Avg: 150-220 ILS/person</span>
+          <span>Nahalat Binyamin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="dairy" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
+        <span class="tag tag-dairy">Dairy</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Florentina</h3>
+        <div class="cuisine">Italian / Gastropub</div>
+        <div class="desc">Beloved kosher dairy gastropub in a charming red-roofed house with a pastoral garden. Fresh handmade pastas, stone-baked pizzas, salads, and an impressive kosher wine list. Rated 9.2.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu from 5 PM, Motzei Shabbat</span>
+          <span class="avg-price">Avg: 100-160 ILS/person</span>
+          <span>Florentin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Poup&eacute;e</h3>
+        <div class="cuisine">French / Meat / Lounge</div>
+        <div class="desc">Lavish kosher meat restaurant and lounge by Chef Aviv Moshe. French haute cuisine with Mediterranean touches &mdash; sabich tartare, oxtail tortellini. After 9 PM it transforms into an upscale 18+ lounge with music.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Thu or Motzei Shabbat, 8 PM</span>
+          <span class="avg-price">Avg: 300-450 ILS/person</span>
+          <span>Central Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="kosher-tag">Rabbanut</span>
+      </div>
+      <div class="card-body">
+        <h3>Nini Hachi</h3>
+        <div class="cuisine">Japanese / Sushi</div>
+        <div class="desc">Award-winning kosher Japanese restaurant in north Tel Aviv. Sushi, ramen, teppanyaki, and authentic noodle dishes. TripAdvisor Travelers' Choice 2025 &mdash; widely considered the best kosher sushi in Israel.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Ben Yehuda 228</span>
         </div>
       </div>
     </div>
@@ -833,6 +931,23 @@
           <span class="best-time">Best: Mon-Thu, 8:30 PM</span>
           <span class="avg-price">Avg: 200-300 ILS/person</span>
           <span>Agrippas Street</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="mehadrin">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="kosher-tag">Mehadrin</span>
+      </div>
+      <div class="card-body">
+        <h3>Piccolino</h3>
+        <div class="cuisine">Italian / Dairy</div>
+        <div class="desc">Celebrated Mehadrin Italian dairy restaurant in Music Square, Nachalat Shiva. Fine fish, fresh pizzas, pastas, and desserts. Live music plays in the courtyard &mdash; a Jerusalem culinary institution run by three generations.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Nachalat Shiva</span>
         </div>
       </div>
     </div>
@@ -1136,6 +1251,235 @@
 </section>
 
 </div><!-- end tab-restaurants -->
+
+<div id="tab-popular" class="tab-content">
+
+<section class="city-section">
+  <h2 class="city-title">Most Popular in Israel</h2>
+  <p class="city-subtitle">The top-rated kosher restaurants and bars across Israel &mdash; crowd favorites and critic picks for 2024&ndash;2026.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">1</span>
+      </div>
+      <div class="card-body">
+        <h3>Herbert Samuel</h3>
+        <div class="cuisine">Modern Israeli / Fine Dining</div>
+        <div class="popular-why">La Liste Ranked &bull; Chef Yonatan Roshfeld</div>
+        <div class="desc">Widely considered the best kosher gourmet restaurant in Israel. Chef Yonatan Roshfeld's modern Israeli cuisine with Mediterranean influences. Featured on France's La Liste of the world's top 1,000 restaurants.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 250-400 ILS/person</span>
+          <span>Herzliya Pituach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">2</span>
+      </div>
+      <div class="card-body">
+        <h3>Malka</h3>
+        <div class="cuisine">Modern Israeli / Vegetable-Forward</div>
+        <div class="popular-why">Chef Eyal Shani &bull; Top 10 Israel</div>
+        <div class="desc">Celebrity chef Eyal Shani's first kosher restaurant. His signature flair for making vegetables the hero &mdash; zucchini lollies, lima beans, fresh fish &mdash; in a rustic, elegant setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 200-300 ILS/person</span>
+          <span>Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">3</span>
+      </div>
+      <div class="card-body">
+        <h3>Lumina by Meir Adoni</h3>
+        <div class="cuisine">Modern Israeli / Fine Dining</div>
+        <div class="popular-why">La Liste Ranked &bull; Chef Meir Adoni</div>
+        <div class="desc">Chef Meir Adoni's flagship at the Carlton Hotel. Innovative tasting menus blending Moroccan, Israeli, and French influences. Ranked among the world's top 1,000 restaurants.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Motzei Shabbat or Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 280-400 ILS/person</span>
+          <span>Tel Aviv Carlton</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">4</span>
+      </div>
+      <div class="card-body">
+        <h3>Poup&eacute;e</h3>
+        <div class="cuisine">French / Meat / Lounge</div>
+        <div class="popular-why">Tel Aviv's Hottest Spot &bull; Chef Aviv Moshe</div>
+        <div class="desc">Lavish 470-sqm kosher meat restaurant and lounge. French haute cuisine with Mediterranean touches by day, upscale 18+ lounge with music by night. The place to see and be seen.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Thu or Motzei Shabbat, 8 PM</span>
+          <span class="avg-price">Avg: 300-450 ILS/person</span>
+          <span>Central Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="popular-rank">5</span>
+      </div>
+      <div class="card-body">
+        <h3>Nini Hachi</h3>
+        <div class="cuisine">Japanese / Sushi</div>
+        <div class="popular-why">TripAdvisor Travelers' Choice 2025</div>
+        <div class="desc">Best kosher sushi in Israel. Award-winning Japanese restaurant with sushi, ramen, teppanyaki, and a special pregnancy-safe sushi line. Stylish decor and intimate atmosphere.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Ben Yehuda 228, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">6</span>
+      </div>
+      <div class="card-body">
+        <h3>Ocean Grill</h3>
+        <div class="cuisine">Mediterranean / Rooftop</div>
+        <div class="popular-why">Best View in Tel Aviv &bull; Setai Hotel</div>
+        <div class="desc">Perched on the rooftop of the luxurious Setai Hotel in Jaffa. Panoramic Mediterranean views, creative kosher cuisine, and an unforgettable sunset dining experience.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sunset, Tue-Thu</span>
+          <span class="avg-price">Avg: 250-350 ILS/person</span>
+          <span>Jaffa, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="italian" data-price="mid" data-kashrut="mehadrin">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=600&q=80')">
+        <span class="tag tag-italian">Italian</span>
+        <span class="popular-rank">7</span>
+      </div>
+      <div class="card-body">
+        <h3>Piccolino</h3>
+        <div class="cuisine">Italian / Dairy</div>
+        <div class="popular-why">Jerusalem's #1 Dairy &bull; Mehadrin</div>
+        <div class="desc">Jerusalem's most celebrated kosher dairy Italian. Fine fish, fresh pizza, pasta, and desserts in Music Square with live music. Run by three generations of a respected Jerusalem family.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 7:30 PM</span>
+          <span class="avg-price">Avg: 140-200 ILS/person</span>
+          <span>Nachalat Shiva, Jerusalem</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="grill" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80')">
+        <span class="tag tag-grill">Grill</span>
+        <span class="popular-rank">8</span>
+      </div>
+      <div class="card-body">
+        <h3>M25</h3>
+        <div class="cuisine">Steakhouse / Meat</div>
+        <div class="popular-why">Top Steakhouse &bull; Neve Tzedek</div>
+        <div class="desc">High-end kosher steakhouse in charming Neve Tzedek. All about great cuts &mdash; expertly prepared steaks, premium burgers, and slow-cooked meats in a refined setting.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 200-300 ILS/person</span>
+          <span>Neve Tzedek, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="bar" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80')">
+        <span class="tag tag-bar">Bar</span>
+        <span class="popular-rank">9</span>
+      </div>
+      <div class="card-body">
+        <h3>Whiskey Bar &amp; Museum</h3>
+        <div class="cuisine">Whiskey Bar / Steakhouse</div>
+        <div class="popular-why">1,000+ Whiskeys &bull; Templar Tunnel</div>
+        <div class="desc">One of the largest whiskey bars in the world, set in a 19th-century Templar tunnel beneath Sarona. Over 1,000 whiskeys from 13 countries alongside premium kosher steaks and smoked meats.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Motzei Shabbat or Thu, 9 PM</span>
+          <span class="avg-price">Avg: 150-250 ILS/person</span>
+          <span>Sarona, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="fine-dining" data-price="upscale" data-kashrut="mehadrin">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&q=80')">
+        <span class="tag tag-fine">Fine Dining</span>
+        <span class="popular-rank">10</span>
+      </div>
+      <div class="card-body">
+        <h3>Decks</h3>
+        <div class="cuisine">Steakhouse / Lakeside</div>
+        <div class="popular-why">Best View in the North &bull; Mehadrin</div>
+        <div class="desc">Iconic kosher steakhouse right on the Sea of Galilee. Premium grilled meats and fish with magical lakeside views. A Tiberias institution and one of Israel's most scenic dining experiences.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Motzei Shabbat, sunset</span>
+          <span class="avg-price">Avg: 180-280 ILS/person</span>
+          <span>Tiberias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="dairy" data-price="mid" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')">
+        <span class="tag tag-dairy">Dairy</span>
+        <span class="popular-rank">11</span>
+      </div>
+      <div class="card-body">
+        <h3>Florentina</h3>
+        <div class="cuisine">Italian / Gastropub</div>
+        <div class="popular-why">Rated 9.2 &bull; Florentin Favorite</div>
+        <div class="desc">Charming kosher dairy gastropub in a red-roofed house with a pastoral garden. Handmade pastas, stone-baked pizzas, and an impressive wine list. A Florentin neighborhood institution.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Sun-Thu from 5 PM</span>
+          <span class="avg-price">Avg: 100-160 ILS/person</span>
+          <span>Florentin, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" data-type="asian" data-price="upscale" data-kashrut="rabbanut">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80')">
+        <span class="tag tag-asian">Asian</span>
+        <span class="popular-rank">12</span>
+      </div>
+      <div class="card-body">
+        <h3>Taizu</h3>
+        <div class="cuisine">Asian Fusion / Fine Dining</div>
+        <div class="popular-why">Top Asian &bull; Thailand-Vietnam-China-Japan</div>
+        <div class="desc">High-end kosher Asian fusion inspired by four countries. Creative tasting menus, bold flavors, and stunning plating. One of Israel's most innovative dining experiences.</div>
+        <div class="card-meta">
+          <span class="best-time">Best: Tue-Thu, 8 PM</span>
+          <span class="avg-price">Avg: 220-350 ILS/person</span>
+          <span>Derech Begin, Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- end tab-popular -->
 
 <div id="tab-activities" class="tab-content">
 
@@ -1446,6 +1790,312 @@
           <span class="activity-time">Best: Thu or Motzei Shabbat, 9 PM</span>
           <span class="activity-cost">50-100 ILS/person</span>
           <span>South Tel Aviv</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JERUSALEM ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Jerusalem Activities</h2>
+  <p class="city-subtitle">Ancient history, golden sunsets, and unforgettable moments in the holy city.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1547483238-2cbf881a559f?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Sunset at the Mount of Olives</h3>
+        <div class="activity-category">Views / Romantic</div>
+        <div class="desc">Watch Jerusalem's Old City turn deep amber and gold as the sun sets from the Mount of Olives. One of the most breathtaking views in the world &mdash; and it's free.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 30 min before sunset</span>
+          <span class="activity-cost">Free</span>
+          <span>Mount of Olives</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Old City Night Walk</h3>
+        <div class="activity-category">History / Walking</div>
+        <div class="desc">Wander the ancient alleyways of the Jewish Quarter at night. Glowing stone walls, quiet courtyards, and 3,000 years of history at every turn. Magical with just the two of you.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: After 8 PM, Sun-Thu</span>
+          <span class="activity-cost">Free</span>
+          <span>Old City</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Mahane Yehuda After Dark</h3>
+        <div class="activity-category">Nightlife / Street Food</div>
+        <div class="desc">By day it's a bustling market. By night, the shuk transforms into Jerusalem's hottest nightlife scene with bars, live music, and vibrant street art on every shutter.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Thu night, 9 PM onwards</span>
+          <span class="activity-cost">50-150 ILS/couple</span>
+          <span>Mahane Yehuda</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>Tower of David Light Show</h3>
+        <div class="activity-category">History / Experience</div>
+        <div class="desc">Spectacular light and sound show projected onto the walls of the ancient Citadel. The story of Jerusalem comes alive in a breathtaking immersive experience.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Evening shows, check schedule</span>
+          <span class="activity-cost">60-80 ILS/person</span>
+          <span>Tower of David</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HAIFA ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Haifa Activities</h2>
+  <p class="city-subtitle">Sea breezes, stunning gardens, and coexistence in Israel's beautiful northern city.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Bah&aacute;&rsquo;&iacute; Gardens Stroll</h3>
+        <div class="activity-category">Gardens / Views</div>
+        <div class="desc">Walk through 19 stunning terraces of manicured gardens cascading down Mount Carmel to the sea. Breathtaking views of the Mediterranean &mdash; one of Israel's most romantic spots.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Morning, 9 AM - 12 PM</span>
+          <span class="activity-cost">Free</span>
+          <span>Mount Carmel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&q=80')">
+        <span class="activity-type type-outdoor">Outdoor</span>
+      </div>
+      <div class="activity-body">
+        <h3>Yafe Nof Promenade</h3>
+        <div class="activity-category">Walking / Views</div>
+        <div class="desc">Stroll along the romantic Yafe Nof promenade in the Carmel Center. Panoramic views of the sea, the old city of Akko, and the bay &mdash; gorgeous at sunset.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Sunset, any day</span>
+          <span class="activity-cost">Free</span>
+          <span>Carmel Center</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80')">
+        <span class="activity-type type-culture">Culture</span>
+      </div>
+      <div class="activity-body">
+        <h3>German Colony Walk</h3>
+        <div class="activity-category">History / Food</div>
+        <div class="desc">Walk down Ben Gurion Boulevard through the German Colony. Beautiful Templar-era architecture, cozy cafes, boutiques, and the energy of Haifa's coexistence culture.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Late afternoon, Sun-Thu</span>
+          <span class="activity-cost">Free</span>
+          <span>German Colony</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EILAT ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Eilat Activities</h2>
+  <p class="city-subtitle">Red Sea adventures and desert magic at Israel's southern tip.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80')">
+        <span class="activity-type type-adventure">Adventure</span>
+      </div>
+      <div class="activity-body">
+        <h3>Snorkeling at Coral Beach</h3>
+        <div class="activity-category">Water / Nature</div>
+        <div class="desc">Crystal-clear Red Sea waters with visibility up to 30 meters. Explore colorful coral reefs and exotic fish together &mdash; one of the best snorkeling spots in the world.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Morning, any day</span>
+          <span class="activity-cost">35 ILS/person entry</span>
+          <span>Coral Beach Nature Reserve</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80')">
+        <span class="activity-type type-adventure">Adventure</span>
+      </div>
+      <div class="activity-body">
+        <h3>Timna Park at Sunset</h3>
+        <div class="activity-category">Desert / Nature</div>
+        <div class="desc">Otherworldly desert landscapes, ancient copper mines, and Solomon's Pillars. Drive 25 minutes north for a dramatic sunset hike through one of Israel's most unique natural sites.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Late afternoon for sunset</span>
+          <span class="activity-cost">50 ILS/person</span>
+          <span>Timna Valley</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Red Sea Sunset Cruise</h3>
+        <div class="activity-category">Boat / Romantic</div>
+        <div class="desc">Board a sunset cruise on the Red Sea with views of four countries &mdash; Israel, Jordan, Egypt, and Saudi Arabia. Wine, music, and the desert mountains turning pink and gold.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: 1 hour before sunset</span>
+          <span class="activity-cost">150-250 ILS/person</span>
+          <span>Eilat Marina</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALILEE ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Galilee Activities</h2>
+  <p class="city-subtitle">Rolling hills, wineries, and nature &mdash; Israel's most romantic region.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Winery Tour &amp; Tasting</h3>
+        <div class="activity-category">Wine / Nature</div>
+        <div class="desc">Tour a boutique Galilean winery together. Sample award-winning wines among the vineyards with mountain views. The Upper Galilee is Israel's premier wine region.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Fri afternoon, 12-4 PM</span>
+          <span class="activity-cost">80-150 ILS/person</span>
+          <span>Upper Galilee</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&q=80')">
+        <span class="activity-type type-outdoor">Outdoor</span>
+      </div>
+      <div class="activity-body">
+        <h3>Hike to Banias Waterfall</h3>
+        <div class="activity-category">Hiking / Nature</div>
+        <div class="desc">Easy, scenic trail through lush forests to Israel's most beautiful waterfall. The sound of rushing water, ancient ruins, and cool mountain air &mdash; pure Galilee magic.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Morning, any day</span>
+          <span class="activity-cost">30 ILS/person</span>
+          <span>Banias Nature Reserve</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&q=80')">
+        <span class="activity-type type-adventure">Adventure</span>
+      </div>
+      <div class="activity-body">
+        <h3>Kayaking on the Jordan</h3>
+        <div class="activity-category">Water Sports / Adventure</div>
+        <div class="desc">Paddle a tandem kayak down the Jordan River together. A fun, easy ride through green banks and cool water &mdash; Israel's most popular water activity.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Morning, Sun-Fri</span>
+          <span class="activity-cost">80-120 ILS/person</span>
+          <span>Jordan River</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RISHON LEZION ACTIVITIES -->
+<section class="city-section">
+  <h2 class="city-title">Rishon LeZion Activities</h2>
+  <p class="city-subtitle">Beach vibes, local charm, and creative dates just south of Tel Aviv.</p>
+  <div class="city-divider"></div>
+  <div class="card-grid">
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')">
+        <span class="activity-type type-romantic">Romantic</span>
+      </div>
+      <div class="activity-body">
+        <h3>Palmachim Beach Sunset</h3>
+        <div class="activity-category">Beach / Romantic</div>
+        <div class="desc">Rishon's top attraction &mdash; a gorgeous, less-crowded beach perfect for a romantic sunset walk. Bring a blanket and enjoy the Mediterranean without the Tel Aviv crowds.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Sunset, any day</span>
+          <span class="activity-cost">Free</span>
+          <span>Palmachim Beach</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=600&q=80')">
+        <span class="activity-type type-adventure">Adventure</span>
+      </div>
+      <div class="activity-body">
+        <h3>Sherlocked Escape Room</h3>
+        <div class="activity-category">Puzzle / Teamwork</div>
+        <div class="desc">Immersive escape room experience in Rishon with themed rooms and creative puzzles. A fun, challenging date that brings you closer together under pressure.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Any evening, book ahead</span>
+          <span class="activity-cost">100-140 ILS/person</span>
+          <span>Rishon LeZion</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&q=80')">
+        <span class="activity-type type-outdoor">Outdoor</span>
+      </div>
+      <div class="activity-body">
+        <h3>Bike Tour &amp; Park Picnic</h3>
+        <div class="activity-category">Cycling / Outdoors</div>
+        <div class="desc">Rent bikes and cruise through Rishon's green spaces. End with a picnic in Ben Gurion Park &mdash; a relaxed, budget-friendly date with fresh air and good vibes.</div>
+        <div class="activity-meta">
+          <span class="activity-time">Best: Late afternoon</span>
+          <span class="activity-cost">Free - 50 ILS/person</span>
+          <span>Ben Gurion Park</span>
         </div>
       </div>
     </div>
